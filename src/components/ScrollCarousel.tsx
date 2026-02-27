@@ -16,8 +16,8 @@ const ScrollCarousel = () => {
     <section ref={targetRef} className="relative h-[300vh] bg-neutral-900">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-4">
-          {cards.map((card) => (
-            <Card card={card} />
+          {cards.map((card, index) => (
+            <Card card={card} key={index} />
           ))}
         </motion.div>
       </div>
